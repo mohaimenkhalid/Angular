@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ComponentInterationComponent } from './component-interation/component-interation.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ComponentInterationComponent } from './component-interation/component-i
     TemplateReferanceVariableComponent,
     TwoWayBindingComponent,
     DirectivesComponent,
-    ComponentInterationComponent
+    ComponentInterationComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
