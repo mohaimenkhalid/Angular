@@ -12,6 +12,9 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { DirectivesComponent } from './directives/directives.component';
 import { ComponentInterationComponent } from './component-interation/component-interation.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ServicesComponent } from './services/services.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {EmployeeService} from "./employee.service";
 
 @NgModule({
   declarations: [
@@ -23,14 +26,18 @@ import { PipesComponent } from './pipes/pipes.component';
     TwoWayBindingComponent,
     DirectivesComponent,
     ComponentInterationComponent,
-    PipesComponent
+    PipesComponent,
+    ServicesComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
