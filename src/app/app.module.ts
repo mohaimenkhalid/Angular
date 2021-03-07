@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { BindingComponent } from './binding/binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TemplateReferanceVariableComponent } from './template-referance-variable/template-referance-variable.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     BindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TemplateReferanceVariableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
