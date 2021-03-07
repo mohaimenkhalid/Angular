@@ -23,12 +23,17 @@ import { Component, OnInit } from '@angular/core';
         <div *ngSwitchCase="'red'">You picked red</div>
         <div *ngSwitchCase="'green'">You picked green</div>
     </div>
+    <hr>
+    <ul *ngFor="let colorItem of colors; index as i">
+      <li>{{i}} {{ colorItem }}</li>
+    </ul>
   `,
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
   public color = 'green';
   public displayName = false;
+  public colors = ['green', 'red', 'blue'];
   constructor() { }
 
   ngOnInit(): void {
