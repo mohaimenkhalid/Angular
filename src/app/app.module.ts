@@ -10,6 +10,7 @@ import { TemplateReferanceVariableComponent } from './template-referance-variabl
 import {FormsModule} from "@angular/forms";
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { ComponentInterationComponent } from './component-interation/component-interation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DirectivesComponent } from './directives/directives.component';
     EventBindingComponent,
     TemplateReferanceVariableComponent,
     TwoWayBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ComponentInterationComponent
   ],
   imports: [
     BrowserModule,
