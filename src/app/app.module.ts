@@ -15,6 +15,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ServicesComponent } from './services/services.component';
 import {EmployeeService} from "./employee.service";
 import {HttpClientModule} from "@angular/common/http";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     ComponentInterationComponent,
     PipesComponent,
     ServicesComponent,
-    routingComponents
+    routingComponents,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
