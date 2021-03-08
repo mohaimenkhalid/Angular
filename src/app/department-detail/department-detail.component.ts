@@ -4,11 +4,17 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router'
   selector: 'app-department-detail',
   template: `
     <p>
-      department-detail works!ID - {{ departmentId }}
+      Your selected ID - {{ departmentId }}
     </p>
-    <button (click)="goPrev()">Previous</button>
-    <button (click)="goNext()">Next</button>
-    <br>
+    <p>
+      <button (click)="contactDetails()">Contact Details</button>
+    </p>
+    <router-outlet></router-outlet>
+    <p>
+      <button (click)="goPrev()">Previous</button>
+      <button (click)="goNext()">Next</button>
+    </p>
+
     <button (click)="goBack()">Back</button>
   `,
   styles: [
@@ -39,6 +45,11 @@ export class DepartmentDetailComponent implements OnInit {
   goBack() {
     let selectedIt = this.departmentId ?? null;
     this.router.navigate(['/departments', {id:selectedIt}]);
+  }
+
+  contactDetails() {
+    //use relative path
+    this.router.navigate(['contact'], { relativeTo: this.route })
   }
 
 }
