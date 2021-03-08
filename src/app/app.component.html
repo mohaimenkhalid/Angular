@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Angular</h1>
+<h1 style="text-align: center">Angular Routing</h1>
 <!--<app-test></app-test>-->
 <!--<app-binding></app-binding>-->
 <!--<app-event-binding></app-event-binding>-->
@@ -8,5 +8,10 @@
 <!--<app-component-interation (childEvent)="message=$event" [parentData]="name"></app-component-interation>
 <h2>{{ message }}</h2>-->
 <!--<app-pipes></app-pipes>-->
-<app-services></app-services>
-<app-employee-list></app-employee-list>
+<!--<app-services></app-services>
+<app-employee-list></app-employee-list>-->
+<nav>
+  <a routerLink="/departments" routerLinkActive="active">Departments</a>
+  <a routerLink="/employees" routerLinkActive="active">Employees</a>
+</nav>
+<router-outlet></router-outlet>
