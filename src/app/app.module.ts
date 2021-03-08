@@ -15,6 +15,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ServicesComponent } from './services/services.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import {EmployeeService} from "./employee.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {EmployeeService} from "./employee.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     EmployeeService
