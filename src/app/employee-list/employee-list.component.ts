@@ -9,6 +9,7 @@ import {EmployeeService} from "../employee.service";
           <ul *ngFor="let employee of employees">
             <li>Name: {{ employee.name }}, Age: {{ employee.age}}</li>
           </ul>
+          {{ errorMessage }}
         </div>
   `,
   styleUrls: ['./employee-list.component.css']
@@ -16,13 +17,16 @@ import {EmployeeService} from "../employee.service";
 export class EmployeeListComponent implements OnInit {
 
   public employees:any = [];
+  public errorMessage:any;
   constructor(private _employeeService: EmployeeService) {
 
   }
 
   ngOnInit(): void {
     this._employeeService.getEmployees()
-      .subscribe(data => this.employees = data)
+      .subscribe(data => this.employees = data,
+        error => this.errorMessage = error
+      );
   }
 
 }
